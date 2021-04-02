@@ -1,12 +1,12 @@
 import './App.css';
-import {} from '../public/background.jpg';
 import React from "react";
+import {FirstPage} from "./Views/FirstPage";
 
 export class App extends React.Component{
     render() {
         return (
             <div className="App">
-                Hello World
+                <FirstPage/>
             </div>
         );
     }
