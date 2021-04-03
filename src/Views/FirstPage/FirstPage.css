@@ -1,46 +1,46 @@
-
-.svg{
+.overlay{
     position: absolute;
     top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    background: black;
     opacity: 0.5;
+    z-index: 0;
 }
 
-.welcome{
+.FirstPage{
     display: flex;
-    color: white;
-    z-index: 30;
+    flex-direction: column;
     text-align: center;
-    flex-direction: row;
-    align-content: center;
+    color: white;
+    z-index: 1;
+    /*opacity: 0.5;*/
+    /*height: 100vh;*/
+    /*width: 100vw;*/
+}
+
+.top_flex{
+    display: flex;
+    flex: 0.3;
     align-items: center;
+    z-index: 3;
     justify-content: space-between;
-    background: blue;
-    opacity: 0.5;
-    height: 20vh;
 }
 
-.welcome > div{
-    z-index: 40;
+.bottom_flex{
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 3;
+    flex: 0.7;
 }
 
-.example_e {
-    border: none;
-    background: #404040;
-    color: #ffffff;
-    font-weight: 100;
-    padding: 20px;
-    text-transform: uppercase;
-    border-radius: 6px;
-    display: inline-block;
-    transition: all 0.3s ease 0s;
+.image{
+    font-size: 0;
 }
 
-.example_e:hover {
-    color: #404040 ;
-    font-weight: 700 ;
-    letter-spacing: 3px;
-    background: none;
-    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-    transition: all 0.3s ease 0s;
+.log_in{
+
 }
