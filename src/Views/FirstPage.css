@@ -1,6 +1,20 @@
-.FirstPage{
+
+.svg{
+    position: absolute;
+    top: 0px;
+    opacity: 0.5;
+}
+
+.welcome{
     display: flex;
-    justify-content: center;
-    align-content: center;
+    color: white;
+    z-index: 30;
+    text-align: center;
     flex-direction: column;
+    align-content: initial;
+    justify-content: left;
+}
+
+.welcome > div{
+    z-index: 40;
 }
