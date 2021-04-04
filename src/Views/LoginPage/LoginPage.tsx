@@ -1,5 +1,6 @@
 import React from "react";
 import './LoginPage.css';
+import { Link } from 'react-router-dom'
 
 export class LoginPage extends React.Component{
     render() {
@@ -62,7 +63,7 @@ export class LoginPage extends React.Component{
                                                     clip-rule="evenodd"/>
                                                     </svg>
                                                 </span>
-                                        Sign in
+                                        <Link to='/instructor'>Sign in</Link>
                                     </button>
                                 </div>
                         </form>

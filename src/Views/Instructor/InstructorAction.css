@@ -1,0 +1,43 @@
+.features{
+    width: 100vw;
+    height: 90vh;
+    /*position: absolute;*/
+    /*top: 3vh;*/
+    /*bottom: 3vh;*/
+    /*right: 0px;*/
+    /*left: 0px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    /*overflow: scroll;*/
+}
+.scam{
+    background: rgba( 7, 0, 0, 0.65 );
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: scroll;
+}
+
+.glass > div{
+    background: rgba( 7, 0, 0, 0.65 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 15.0px );
+    -webkit-backdrop-filter: blur( 15.0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    /*width: 30vh;*/
+    /*height: 30vw;*/
+}
+
+.top_flex{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
