@@ -2,12 +2,7 @@ import React from "react";
 import logo from '../../logo.svg'
 import './FirstPage.css'
 import image from '../../assets/images/frontpage.svg'
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 export class FirstPage extends React.Component{
@@ -48,7 +43,7 @@ export class FirstPage extends React.Component{
                             </div>
                         </div>
                         <div className='image'>
-                           <img src={image} style={{width:"70vh", height:"70vh", fontSize:'0', borderRadius:'50px'}} />
+                           <img src={image} style={{width:"70vh", height:"70vh", fontSize:'0', borderRadius:'50px'}} alt='SVG Image' />
                         </div>
                     </div>
 

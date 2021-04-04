@@ -5,6 +5,7 @@ import {Footer} from "./Views/Footer/Footer";
 import {BrowserRouter, Route} from "react-router-dom";
 import {LoginPage} from "./Views/LoginPage/LoginPage";
 import {InstructorAction} from "./Views/Instructor/InstructorAction";
+import {InstructorStructure} from './Views/Instructor/InstructorStructure/InstructureStructure'
 
 export class App extends React.Component{
     render() {
@@ -17,6 +18,7 @@ export class App extends React.Component{
                     <Route path='/' exact component={FirstPage}/>
                     <Route path='/login' exact component={LoginPage}/>
                     <Route path='/instructor' exact component={InstructorAction} />
+                    <Route path='/action' exact component={InstructorStructure} />
                 {/*</BrowserRouter>*/}
                 <Footer />
             </div>
