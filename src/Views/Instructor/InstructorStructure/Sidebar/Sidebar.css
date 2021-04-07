@@ -1,5 +1,12 @@
 .Sidebar{
-    flex: 0.2;
+    flex: 0.0;
+    width: 0px;
     height: 100vh;
     background: aliceblue;
+}
+
+@media screen and (min-width: 990px){
+    .Sidebar{
+        flex: 0.2;
+    }
 }

@@ -8,7 +8,7 @@ export class InstructorStructure extends React.Component{
     render() {
         return (
             <div className='dashboard'>
-                <Sidebar/>
+                <Sidebar />
                 <MainContent />
             </div>
         );
