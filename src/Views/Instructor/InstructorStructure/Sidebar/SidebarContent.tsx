@@ -1,26 +1,31 @@
 import React from "react";
 import './SidebarContent.css';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    useRouteMatch,
-    useParams,
-    match, RouteComponentProps
-} from "react-router-dom";
+import {BrowserRouter, Route} from "react-router-dom";
+import {SidebarOption} from "./SidebarOption";
 
-export class SidebarContent extends React.Component<RouteComponentProps>{
-
+export class SidebarContent extends React.Component{
     render() {
-        const { path, url } = this.props.match;
         return (
 
             <div className='SidebarContent'>
-                Dnyaan
-                <br></br>
-                {path}
+                <Route exact path='/action' component={SidebarOption}/>
+                <Route exact path='/action/chat'>
+                    Chat
+                </Route>
+                <Route exact path='/action/lectures'>
+                    Lectures
+                </Route>
+                <Route exact path='/action/performance'>
+                    Performance
+                </Route>
+                <Route exact path='/action/assignments'>
+                    Assignments
+                </Route>
+                <Route exact path='/action/exams'>
+                    Exams
+                </Route>
             </div>
+
         );
     }
 }

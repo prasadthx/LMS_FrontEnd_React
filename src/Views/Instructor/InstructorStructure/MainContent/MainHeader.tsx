@@ -3,6 +3,7 @@ import {useState} from "react";
 import ReactDOM from 'react-dom'
 import './MainHeader.css';
 import {FiMenu} from 'react-icons/fi'
+import { Link } from 'react-router-dom'
 
 export class MainHeader extends React.Component<any,any> {
     render() {
@@ -16,12 +17,17 @@ export class MainHeader extends React.Component<any,any> {
                     <div> Hello User </div>
                 </div>
                 <div className='NavigationPanel flex justify-evenly'>
-                    <div> Profile </div>
-                    <div> Chat </div>
-                    <div> Lectures </div>
-                    <div> Student Performance </div>
-                    <div> Exams </div>
-                    <div> Assignments </div>
+                    <Link to='/action/profile'><div> Profile </div></Link>
+                    <Link to='/action/chat'><div> Chat </div></Link>
+                    <Link to='/action/lectures'><div> Lectures </div></Link>
+                    <Link to='/action/performance'><div> Student Performance </div></Link>
+                    <Link to='/action/exams'><div> Exams </div></Link>
+                    <Link to='/action/assignments'><div> Assignments </div></Link>
+                    {/*<div> Chat </div>*/}
+                    {/*<div> Lectures </div>*/}
+                    {/*<div> Student Performance </div>*/}
+                    {/*<div> Exams </div>*/}
+                    {/*<div> Assignments </div>*/}
                 </div>
             </div>
         );

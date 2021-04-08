@@ -9,7 +9,6 @@ export class MainContent extends React.Component<any,any>{
         return (
             <div className={MainContentClass+' flex flex-col'}>
                 <MainHeader toggleSidebar={this.props.toggleSidebar}/>
-                <button onClick={this.props.toggleSidebar}>Click me</button>
                 <Content/>
             </div>
         );

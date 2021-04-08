@@ -2,8 +2,8 @@ import React from "react";
 import './InstructorStructure.css';
 import {Sidebar} from "./Sidebar/Sidebar";
 import {MainContent} from "./MainContent/MainContent";
-import {withRouter} from "react-router-dom";
-import {App} from "../../../App";
+import {BrowserRouter, Route} from "react-router-dom";
+import {SidebarOption} from "./Sidebar/SidebarOption";
 
 
 export class InstructorStructure extends React.Component<{},{state:string}>{
@@ -26,12 +26,31 @@ export class InstructorStructure extends React.Component<{},{state:string}>{
     render() {
         const greeting = 'Welcome to React';
         return (
+
             <div className='dashboard'>
+                <BrowserRouter>
                 <Sidebar sidebarStatus = {this.state.state}/>
-                <MainContent toggleSidebar={this.toggleState} sidebarStatus = {this.state.state}/>
+                    <MainContent toggleSidebar={this.toggleState} sidebarStatus = {this.state.state}>
+                        <Route exact path='/action' component={SidebarOption}/>
+                        <Route exact path='/action/chat'>
+                            Chat
+                        </Route>
+                        <Route exact path='/action/lectures'>
+                            Lectures
+                        </Route>
+                        <Route exact path='/action/performance'>
+                            Performance
+                        </Route>
+                        <Route exact path='/action/assignments'>
+                            Assignments
+                        </Route>
+                        <Route exact path='/action/exams'>
+                            Exams
+                        </Route>
+                    </MainContent>
+                </BrowserRouter>
             </div>
+
         );
     }
 }
-
-export default withRouter(App);
