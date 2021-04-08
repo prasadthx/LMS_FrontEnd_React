@@ -16,6 +16,7 @@
 
     /*overflow-x: scroll;*/
 }
-.NavigationPanel>div{
+.NavigationPanel>div:hover{
     /*border: white solid 2px;*/
+    background: blue;
 }

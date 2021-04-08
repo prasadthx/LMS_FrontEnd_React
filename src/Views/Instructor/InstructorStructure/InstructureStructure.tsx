@@ -2,6 +2,8 @@ import React from "react";
 import './InstructorStructure.css';
 import {Sidebar} from "./Sidebar/Sidebar";
 import {MainContent} from "./MainContent/MainContent";
+import {withRouter} from "react-router-dom";
+import {App} from "../../../App";
 
 
 export class InstructorStructure extends React.Component<{},{state:string}>{
@@ -31,3 +33,5 @@ export class InstructorStructure extends React.Component<{},{state:string}>{
         );
     }
 }
+
+export default withRouter(App);
