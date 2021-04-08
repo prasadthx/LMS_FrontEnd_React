@@ -1,13 +1,15 @@
 import React from "react";
 import './MainContent.css';
 import {MainHeader} from "./MainHeader";
-import {Content} from "./Content";
+import Content from './Content'
 
-export class MainContent extends React.Component{
-    render() {
+export class MainContent extends React.Component<any,any>{
+    render(){
+        const MainContentClass = (this.props.sidebarStatus == 'before') ? 'MainContent' : 'ToggleMainContent';
         return (
-            <div className='MainContent flex flex-col'>
-                <MainHeader/>
+            <div className={MainContentClass+' flex flex-col'}>
+                <MainHeader toggleSidebar={this.props.toggleSidebar}/>
+                <button onClick={this.props.toggleSidebar}>Click me</button>
                 <Content/>
             </div>
         );
