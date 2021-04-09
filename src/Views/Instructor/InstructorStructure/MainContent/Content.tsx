@@ -1,5 +1,5 @@
 import './Content.css';
-import {Route, useRouteMatch, useLocation} from "react-router-dom";
+import {Route, useRouteMatch, useLocation, Redirect} from "react-router-dom";
 import React from "react";
 import {CreateAssignment} from "./Contents/Assignments/CreateAssignment";
 import {EvaluateAssignment} from "./Contents/Assignments/EvaluateAssignment";
@@ -42,11 +42,17 @@ export default function Content(){
             <Route path='/action/assignments/EvaluateAssignment'>
                 <EvaluateAssignment />
             </Route>
+            <Route path='/action/assignments'>
+                <Redirect to='/action/assignments/CreateAssignment'/>
+            </Route>
 
 
             {/*Chat*/}
-            <Route path='/action/chats/Classes'>
+            <Route path='/action/chat/Classes'>
                 <ChatClasses />
+            </Route>
+            <Route path='/action/chat'>
+                <Redirect to='/action/chat/Classes'/>
             </Route>
 
 
@@ -57,11 +63,17 @@ export default function Content(){
             <Route path='/action/exams/EvaluateTest'>
                 <EvaluateTest />
             </Route>
+            <Route path='/action/exams'>
+                <Redirect to='/action/exams/CreateTest'/>
+            </Route>
 
 
             {/*Lectures*/}
             <Route path='/action/lectures/subjects'>
                 <Subjects />
+            </Route>
+            <Route path='/action/lectures'>
+                <Redirect to='/action/lectures/subjects'/>
             </Route>
 
 
@@ -71,6 +83,9 @@ export default function Content(){
             </Route>
             <Route path='/action/performance/TestResults'>
                 <TestResults />
+            </Route>
+            <Route path='/action/performance'>
+                <Redirect to='/action/performance/attendance'/>
             </Route>
 
 
@@ -84,9 +99,12 @@ export default function Content(){
             <Route path='/action/profile/profile'>
                 <Profile />
             </Route>
-            {/*<Route redirectTo=''>*/}
-            {/*    <Profile />*/}
-            {/*</Route>*/}
+            <Route path='/action/profile'>
+                <Redirect to='/action/profile/profile'/>
+            </Route>
+            <Route path='/action'>
+                <Redirect to='/action/profile/profile'/>
+            </Route>
         </div>
     );
 };
