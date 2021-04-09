@@ -5,6 +5,9 @@ import {Link} from 'react-router-dom'
 export class SidebarOption extends React.Component<{content: string},any>{
     constructor(props:any){
         super(props);
+        this.state = {
+            isClicked:false
+        }
     };
 
     optionRenderer = (menu: { performance: string[]; exams: string[]; assignments: string[]; chat: string[]; profile: string[]; lectures: string[] }) => {
@@ -43,6 +46,7 @@ export class SidebarOption extends React.Component<{content: string},any>{
             ,
             'lectures':
                 [
+                    'TimeTable',
                     'Subjects'
                 ]
             ,
@@ -67,7 +71,8 @@ export class SidebarOption extends React.Component<{content: string},any>{
         return (
             <div className='SidebarOption'>
                 {this.optionRenderer(menus).map( (option:string, index:number) => (
-                    <Link to={'/action/' + this.props.content +'/'+ option.replaceAll(' ','')} className='focus-within:bg-black' >
+                    <Link to={'/action/' + this.props.content +'/'+ option.replaceAll(' ','')}
+                          className='focus-within:bg-black'>
                         <div className='py-4 px-0.5  text-center focus-within:bg-blue-600'>
                             {option}
                         </div>
