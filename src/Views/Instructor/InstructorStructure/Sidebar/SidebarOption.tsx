@@ -30,8 +30,8 @@ export class SidebarOption extends React.Component<{content: string},any>{
         const menus = {
             'profile' :
                 [
-                    'Classes',
                     'Profile',
+                    'Classes',
                     'Feedback'
                 ]
             ,
@@ -43,7 +43,7 @@ export class SidebarOption extends React.Component<{content: string},any>{
             ,
             'lectures':
                 [
-                    'subjects'
+                    'Subjects'
                 ]
             ,
             'exams':
@@ -60,14 +60,18 @@ export class SidebarOption extends React.Component<{content: string},any>{
             ,
             'chat':
                 [
-                    'classes'
+                    'Classes'
                 ]
         }
 
         return (
             <div className='SidebarOption'>
                 {this.optionRenderer(menus).map( (option:string, index:number) => (
-                    <div> <Link to={'/action/' + this.props.content +'/'+ option.replaceAll(' ','')} >{option}</Link> </div>
+                    <Link to={'/action/' + this.props.content +'/'+ option.replaceAll(' ','')} className='focus-within:bg-black' >
+                        <div className='py-4 px-0.5  text-center focus-within:bg-blue-600'>
+                            {option}
+                        </div>
+                    </Link>
                 ))}
             </div>
     );
