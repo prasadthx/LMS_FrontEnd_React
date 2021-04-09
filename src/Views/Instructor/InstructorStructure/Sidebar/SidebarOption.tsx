@@ -1,5 +1,6 @@
 import React from "react";
-//import './SidebarOption.css'
+import './SidebarOption.css'
+import {Link} from 'react-router-dom'
 
 export class SidebarOption extends React.Component<{content: string},any>{
     constructor(props:any){
@@ -20,6 +21,8 @@ export class SidebarOption extends React.Component<{content: string},any>{
                 return menu.exams;
             case 'chat':
                 return menu.chat;
+            default:
+                return menu.profile;
         }
     }
 
@@ -62,9 +65,11 @@ export class SidebarOption extends React.Component<{content: string},any>{
         }
 
         return (
-            <div>
-                {this.optionRenderer(menus)}
+            <div className='SidebarOption'>
+                {this.optionRenderer(menus).map( (option:string, index:number) => (
+                    <div> <Link to={'/action/' + this.props.content +'/'+ option.replaceAll(' ','')} >{option}</Link> </div>
+                ))}
             </div>
-        );
-    }
+    );
+}
 }

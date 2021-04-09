@@ -1,7 +1,7 @@
 import React from "react";
 import './MainContent.css';
 import {MainHeader} from "./MainHeader";
-import {Content} from "./Content";
+import Content from "./Content";
 
 
 export class MainContent extends React.Component<any,any>{
