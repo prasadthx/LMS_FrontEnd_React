@@ -3,24 +3,28 @@ import './SidebarContent.css';
 import {BrowserRouter, Route, Link} from "react-router-dom";
 import {SidebarOption} from "./SidebarOption";
 
-export class SidebarContent extends React.Component{
+export class SidebarContent extends React.Component<any,any>{
     render() {
         return (
-
             <div className='SidebarContent'>
                 <Route path='/action/profile'>
-                    Action
+                    <SidebarOption content='profile'/>
                 </Route>
                 <Route path='/action/chat'>
-                    Chat
+                    <SidebarOption content='chat'/>
                 </Route>
-                <Route path='/action/lectures' component={SidebarOption}/>
+                <Route path='/action/lectures'>
+                    <SidebarOption content='lectures'/>
+                </Route>
                 <Route path='/action/performance'>
-                    <Link to='/action/performance/class'><div> Chat </div></Link>
-                    <Link to='/action/performance/class'><div> Chat </div></Link>
+                    <SidebarOption content='performance'/>
                 </Route>
-                <Route exact path='/action/assignments'>Assignments</Route>
-                <Route exact path='/action/exams'/>
+                <Route path='/action/assignments'>
+                    <SidebarOption content='assignments'/>
+                </Route>
+                <Route path='/action/exams'>
+                    <SidebarOption content='exams'/>
+                </Route>
             </div>
 
         );
