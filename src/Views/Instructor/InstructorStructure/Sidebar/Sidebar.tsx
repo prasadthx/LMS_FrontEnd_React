@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import './Sidebar.css';
 import {SidebarHeader} from "./SidebarHeader";
 import {SidebarContent} from "./SidebarContent";
-import {BrowserRouter} from "react-router-dom";
+import {BrowserRouter, Route, withRouter} from "react-router-dom";
+import {SidebarOption} from "./SidebarOption";
+import {MainContent} from "../MainContent/MainContent";
 
 export class Sidebar extends React.Component<any,{initialValue:string}>{
     constructor(props:{}) {
@@ -31,3 +33,5 @@ export class Sidebar extends React.Component<any,{initialValue:string}>{
         );
     }
 }
+
+// withRouter(Sidebar);

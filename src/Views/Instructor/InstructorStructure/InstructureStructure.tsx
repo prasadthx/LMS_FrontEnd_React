@@ -28,27 +28,8 @@ export class InstructorStructure extends React.Component<{},{state:string}>{
         return (
 
             <div className='dashboard'>
-                <BrowserRouter>
                 <Sidebar sidebarStatus = {this.state.state}/>
-                    <MainContent toggleSidebar={this.toggleState} sidebarStatus = {this.state.state}>
-                        <Route exact path='/action' component={SidebarOption}/>
-                        <Route exact path='/action/chat'>
-                            Chat
-                        </Route>
-                        <Route exact path='/action/lectures'>
-                            Lectures
-                        </Route>
-                        <Route exact path='/action/performance'>
-                            Performance
-                        </Route>
-                        <Route exact path='/action/assignments'>
-                            Assignments
-                        </Route>
-                        <Route exact path='/action/exams'>
-                            Exams
-                        </Route>
-                    </MainContent>
-                </BrowserRouter>
+                <MainContent toggleSidebar={this.toggleState} sidebarStatus = {this.state.state}/>
             </div>
 
         );

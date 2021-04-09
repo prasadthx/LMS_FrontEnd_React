@@ -11,7 +11,7 @@ import {StudentStructure} from "./Views/Student/StudentStructure";
 export class App extends React.Component{
     render() {
         return (
-            <BrowserRouter>
+            // <BrowserRouter>
             <div className="App">
                 {/*<FirstPage/>*/}
 
@@ -19,13 +19,14 @@ export class App extends React.Component{
                     <Route path='/' exact component={FirstPage}/>
                     <Route path='/login' exact component={LoginPage}/>
                     <Route path='/instructor' exact component={InstructorAction} />
-                    <Route path='/action' exact component={InstructorStructure} />
+                    <Route path='/action' component={InstructorStructure} />
+                    {/*<Route path='/action/performance' exact component={InstructorStructure}/>*/}
                     <Route path='/student' exact component={StudentStructure}/>
                 {/*</BrowserRouter>*/}
                 <Footer />
             </div>
-            </BrowserRouter>
+
         );
-    }
+    };
 }
 
