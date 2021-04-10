@@ -68,17 +68,13 @@ export default class CreateAssignment extends React.Component<any, any>{
                                         </button>
                                     </div>
                                 </div>
+                                <div className='Questionnaire mt-5 my-8'>
                                 <FieldArray name="questions">
                                     {({ fields }) =>
                                         fields.map((name, index) => (
-                                            <div key={name}>
-                                                <label>Cust. #{index + 1}</label>
-                                                <div className="text-black">
-                                                <Field
-                                                    name={`${name}.Question Text`}
-                                                    component="input"
-                                                    placeholder="Enter the Question"
-                                                />
+                                            <div key={name} className='Field my-7'>
+                                                <div className='flex justify-between align-middle'>
+                                                <label className='text-center'>Question #{index + 1}</label>
                                                 <span
                                                     onClick={() => fields.remove(index)}
                                                     style={{ cursor: 'pointer' }}
@@ -86,10 +82,19 @@ export default class CreateAssignment extends React.Component<any, any>{
                                                     ❌
                                                 </span>
                                                 </div>
+                                                <div className="text-black">
+                                                <Field
+                                                    name={`${name}.Question Text`}
+                                                    component="input"
+                                                    placeholder="Enter the Question"
+                                                    className='w-full'
+                                                />
+                                                </div>
                                             </div>
                                         ))
                                     }
                                 </FieldArray>
+                                </div>
 
                                 <div className="buttons flex justify-evenly align-middle">
                                     <button
@@ -117,7 +122,7 @@ export default class CreateAssignment extends React.Component<any, any>{
                                     </button>
                                 </div>
                                 {/*@ts-ignore*/}
-                                <pre>{JSON.stringify(values, 0, 2)}</pre>
+                                {/*<pre>{JSON.stringify(values, 0, 2)}</pre>*/}
                             </form>
                         )
                     }}
