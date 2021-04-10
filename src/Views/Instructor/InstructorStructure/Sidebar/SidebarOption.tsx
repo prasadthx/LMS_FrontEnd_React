@@ -6,7 +6,7 @@ export class SidebarOption extends React.Component<{content: string},any>{
     constructor(props:any){
         super(props);
         this.state = {
-            isClicked:false
+            focused:0
         }
     };
 
@@ -59,6 +59,7 @@ export class SidebarOption extends React.Component<{content: string},any>{
             'assignments':
                 [
                     'Create Assignment',
+                    'View Assignments',
                     'Evaluate Assignment'
                 ]
             ,
@@ -70,14 +71,19 @@ export class SidebarOption extends React.Component<{content: string},any>{
 
         return (
             <div className='SidebarOption'>
-                {this.optionRenderer(menus).map( (option:string, index:number) => (
-                    <Link to={'/action/' + this.props.content +'/'+ option.replaceAll(' ','')}
-                          className='focus-within:bg-black'>
-                        <div className='py-4 px-0.5  text-center focus-within:bg-blue-600'>
-                            {option}
-                        </div>
-                    </Link>
-                ))}
+                {this.optionRenderer(menus).map((option:string, index:number) => <Link to={'/action/' + this.props.content +'/'+ option.replaceAll(' ','')}
+                      onClick={(e) => {
+                          this.setState({
+                              focused: index,
+                          })
+                      }}
+                      className={index==this.state.focused?'bg-black':''}
+                      key={index}
+                      >
+                    <div className='py-4 px-0.5  text-center focus-within:bg-blue-600'>
+                        {option}
+                    </div>
+                </Link>)}
             </div>
     );
 }

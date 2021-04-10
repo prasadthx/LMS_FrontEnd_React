@@ -1,6 +1,6 @@
-import './Content.css';
 import {Route, useRouteMatch, useLocation, Redirect} from "react-router-dom";
 import React from "react";
+import './Content.css';
 import {CreateAssignment} from "./Contents/Assignments/CreateAssignment";
 import {EvaluateAssignment} from "./Contents/Assignments/EvaluateAssignment";
 import {Classes as ChatClasses} from "./Contents/Chat/Classes";
@@ -12,6 +12,7 @@ import {TestResults} from "./Contents/Performance/TestResults";
 import {Classes} from "./Contents/Profile/Classes";
 import {Feedback} from "./Contents/Profile/Feedback";
 import {Profile} from "./Contents/Profile/Profile";
+import ViewAssignments from "./Contents/Assignments/ViewAssignments";
 
 export default class Content extends React.Component<any,any> {
     render() {
@@ -24,6 +25,9 @@ export default class Content extends React.Component<any,any> {
                 </Route>
                 <Route path='/action/assignments/EvaluateAssignment'>
                     <EvaluateAssignment/>
+                </Route>
+                <Route path='/action/assignments/ViewAssignments'>
+                    <ViewAssignments/>
                 </Route>
                 <Route path='/action/assignments'>
                     <Redirect to='/action/assignments/CreateAssignment'/>
