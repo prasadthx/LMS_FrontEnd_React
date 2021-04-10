@@ -1,7 +1,7 @@
 import {Route, useRouteMatch, useLocation, Redirect} from "react-router-dom";
 import React from "react";
 import './Content.css';
-import {CreateAssignment} from "./Contents/Assignments/CreateAssignment";
+import CreateAssignment from "./Contents/Assignments/CreateAssignment";
 import {EvaluateAssignment} from "./Contents/Assignments/EvaluateAssignment";
 import {Classes as ChatClasses} from "./Contents/Chat/Classes";
 import {CreateTest} from "./Contents/Exams/CreateTests";

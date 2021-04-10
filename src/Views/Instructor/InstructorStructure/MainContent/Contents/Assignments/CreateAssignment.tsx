@@ -1,65 +1,113 @@
 import React from "react";
 import './CreateAssignment.css'
 import { Form, Field } from 'react-final-form'
+import { FieldArray } from 'react-final-form-arrays'
+import arrayMutators from 'final-form-arrays'
 
-
-export class CreateAssignment extends React.Component<any, any>{
-    private handleSubmit: any;
+export default class CreateAssignment extends React.Component<any, any>{
     constructor(props:any) {
         super(props);
-        this.state = {
-            element:<div>
-                Prasad
-            </div>
-        }
-    }
-
-    createQuestion(){
-        console.log("In Create question")
-        let p=document.createElement('p')
-        p.innerText='Hello';
-        return(
-           this.state.element
-        )
     }
 
     render() {
         return (
             <div className="CreateAssignment mx-auto">
                 <Form
-                    onSubmit={()=>{console.log("Hello!")}}
-                    render={({ handleSubmit }) => (
-                        <form onSubmit={handleSubmit}>
-                            <h2>Simple Default Input</h2>
-                            <div>
-                                <label>First Name</label>
-                                <Field name="firstName" component="input" placeholder="First Name" />
-                            </div>
-
-                            <h2>An Arbitrary Reusable Input Component</h2>
-                            <div>
-                                <label>Interests</label>
-                                <Field name="interests" component='input' />
-                            </div>
-
-
-                            <h2>Render Function</h2>
-                            <Field
-                                name="bio"
-                                render={({ input, meta }) => (
+                    onSubmit={()=>console.log('scam')}
+                    mutators={{
+                        ...arrayMutators
+                    }}
+                    render={({
+                                 handleSubmit,
+                                 form: {
+                                     mutators: { push, pop }
+                                 }, // injected from final-form-arrays above
+                                 pristine,
+                                 form,
+                                 submitting,
+                                 values
+                             }) =>
+                    {
+                        return (
+                            <form onSubmit={handleSubmit}>
+                                <div className="AssignmentHeader">
                                     <div>
-                                        <label>Bio</label>
-                                        <textarea {...input} />
-                                        {meta.touched && meta.error && <span>{meta.error}</span>}
+                                        <div className='my-2 py-2'>
+                                            <label className='text-3xl'>Assignment Name: </label>
+                                        </div>
+                                        <div className='text-black text-2xl'>
+                                            <Field name="company" component="input" className='text-center width-3/5' />
+                                        </div>
                                     </div>
-                                )}
-                            />
+                                    <div className="buttons mt-3">
+                                        <button
+                                            type="button"
+                                            onClick={() => push('questions', undefined)}
+                                            className="bg-blue-600 rounded my-2 px-2 py-1"
+                                        >
+                                            Add Question
+                                        </button>
+                                        <button
+                                            type="button"
+                                            onClick={() => pop('questions')}
+                                            className='bg-red-700 rounded my-2 px-2 py-1'
+                                        >
+                                            Remove Question
+                                        </button>
+                                    </div>
+                                </div>
+                                <FieldArray name="questions">
+                                    {({ fields }) =>
+                                        fields.map((name, index) => (
+                                            <div key={name}>
+                                                <label>Cust. #{index + 1}</label>
+                                                <div className="text-black">
+                                                <Field
+                                                    name={`${name}.Question Text`}
+                                                    component="input"
+                                                    placeholder="Enter the Question"
+                                                />
+                                                <Field
+                                                    name={`${name}.lastName`}
+                                                    component="input"
+                                                    placeholder="Last Name"
+                                                />
+                                                <span
+                                                    onClick={() => fields.remove(index)}
+                                                    style={{ cursor: 'pointer' }}
+                                                >
+                                                    ❌
+                                                </span>
+                                                </div>
+                                            </div>
+                                        ))
+                                    }
+                                </FieldArray>
 
-                            <button type="submit">Submit</button>
-                        </form>
-                    )}
+                                <div className="buttons flex justify-evenly align-middle">
+                                    <button
+                                        type="submit"
+                                        disabled={submitting || pristine}
+                                        className="bg-green-600 rounded my-2 px-2 py-1"
+                                    >
+                                        Save Assignment
+                                    </button>
+                                    <button
+                                        type="button"
+                                        onClick={form.reset}
+                                        disabled={submitting || pristine}
+                                        className="bg-white text-black rounded my-2 px-2 py-1"
+                                    >
+                                        Reset
+                                    </button>
+                                </div>
+                                {/*@ts-ignore*/}
+                                <pre>{JSON.stringify(values, 0, 2)}</pre>
+                            </form>
+                        )
+                    }}
                 />
             </div>
         );
-    }
-};
+  }
+}
