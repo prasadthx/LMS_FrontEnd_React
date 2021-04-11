@@ -1,0 +1,23 @@
+.labelNameDiv{
+    color: white;
+    display: flex;
+    
+    justify-content: center;
+    width: 100%;
+    cursor: pointer;
+    align-items: center;
+    padding: 0px;
+    
+}
+labelNameDiv:hover{
+    border-radius: 30px;
+}
+h2{
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+}
+.logoIcon{
+    padding-right: 0px;
+    margin-right: 5px;
+}

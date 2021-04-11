@@ -1,0 +1,26 @@
+.tagNameDiv{
+    height: fit-content;
+    align-items: center;
+    display: flex;
+    flex: 0.8;
+    width:40px;
+    justify-content: space-around;
+    margin-left: 80px;
+    margin-top: 70px;
+
+
+    position: fixed;
+    right: 0px;
+    flex: 0.8;
+    background-color: #bdd2b6;
+    width: 80%;
+    margin-right: 0;
+    z-index: 100;
+    font-weight: 800;
+    height: 70px;
+    align-items: center;
+    
+    padding: 20px;
+    border-bottom: 1px solid #364547;
+
+}
