@@ -21,6 +21,7 @@ export class App extends React.Component{
                     <Route path='/instructor' exact component={InstructorAction} />
                     <Route path='/action' exact component={InstructorStructure} />
                     <Route path='/student' exact component={StudentStructure}/>
+                    
                 {/*</BrowserRouter>*/}
                 <Footer />
             </div>

@@ -1,0 +1,39 @@
+.studentStructureSidebarDiv{
+    
+    
+    display: flex;
+    flex: 0.2;
+    height: 100vh;
+    background-color:#364547;
+    text-align: center;
+    justify-content: center;
+    position: sticky;
+    top: 0px;
+    z-index: 200;
+    padding-right:5px ;
+    
+    
+}
+
+.UnorderList{
+    
+    margin-top: 50px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+li{
+    
+    background-color: #56776c;
+    margin-top: 10px;
+    padding: 20px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+}
+li:hover{
+    border-radius: 15px;
+    transform: border-radius 1000ms ease-in;
+}

@@ -1,0 +1,28 @@
+.studentStructureTopDiv{
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    right: 0px;
+    flex: 0.8;
+    background-color: #bfcba8;
+    width: 80%;
+    margin-right: 0;
+    z-index: 100;
+    font-weight: 800;
+    height: 70px;
+    align-items: center;
+    
+    padding: 20px;
+    border-bottom: 1px solid #364547;
+    
+}
+ .logoName{
+   text-align: center;
+   font-size: 25px;
+   color:#5f939a;
+   margin-left: 300px;
+   justify-content: center;
+   
+}
+

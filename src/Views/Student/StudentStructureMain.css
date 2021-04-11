@@ -1,0 +1,9 @@
+.studentStructureMainDiv{
+    margin-top:140px ;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0.8;
+    background-color: #9e9d89;
+    justify-content: center;
+    
+}
