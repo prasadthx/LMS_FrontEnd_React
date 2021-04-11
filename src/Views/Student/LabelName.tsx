@@ -8,7 +8,7 @@ class LabelName extends React.Component<{ text: string, Icon: IconType }> {
         return (
             <div className="labelNameDiv">
                 <Icon className="logoIcon"/>
-                <h2>{text}</h2>
+                <h2 className='font-medium text-center text-2xl'>{text}</h2>
             </div>
         )
     }

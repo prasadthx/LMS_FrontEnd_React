@@ -9,14 +9,12 @@
     padding: 0px;
     
 }
-labelNameDiv:hover{
+
+.labelNameDiv:hover{
     border-radius: 30px;
 }
-h2{
-    font-weight: 500;
-    font-size: 20px;
-    text-align: center;
-}
+
+
 .logoIcon{
     padding-right: 0px;
     margin-right: 5px;

@@ -5,7 +5,7 @@ import "./MenuCards.css"
 const MenuCards = (props:any) =>{
 return(
     <div className="menuCardDiv">
-        <h3>{props.heading}</h3> <br></br>
+        <h3 className='font-thin float-left'>{props.heading}</h3> <br></br>
         
     
 
