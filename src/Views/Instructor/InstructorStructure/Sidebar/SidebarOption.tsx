@@ -71,7 +71,8 @@ export class SidebarOption extends React.Component<{content: string},any>{
 
         return (
             <div className='SidebarOption'>
-                {this.optionRenderer(menus).map((option:string, index:number) => <Link to={'/action/' + this.props.content +'/'+ option.replaceAll(' ','')}
+                {this.optionRenderer(menus).map((option:string, index:number) =>
+                    <Link to={'/action/' + this.props.content +'/'+ option.replaceAll(' ','')}
                       onClick={(e) => {
                           this.setState({
                               focused: index,

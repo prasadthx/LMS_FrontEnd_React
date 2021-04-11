@@ -16,7 +16,18 @@
 
     /*overflow-x: scroll;*/
 }
-.NavigationPanel>div:hover{
-    /*border: white solid 2px;*/
-    background: blue;
+
+.NavigationPanel>a:hover{
+    background:black;
+}
+
+/*a{*/
+/*    width: 100%;*/
+/*    height:100%;*/
+/*}*/
+
+a>div{
+    padding-top: 0.5vh;
+    width: 100%;
+    height:100%;
 }
