@@ -1,0 +1,24 @@
+.ChatSectionContent{
+    flex: 0.9;
+}
+
+.chats{
+    flex: 0.90;
+}
+
+.operator{
+    flex: 0.1;
+    background:darkblue;
+    justify-content:space-around;
+    align-items:center;
+    align-content: center;
+}
+
+.operator > div{
+
+}
+
+.typeSection{
+    flex: 0.85;
+}
+

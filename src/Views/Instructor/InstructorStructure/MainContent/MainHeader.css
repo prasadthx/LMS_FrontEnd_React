@@ -1,0 +1,33 @@
+.MainHeader{
+    width: 100%;
+    flex: 0.1;
+    background: #2c2c34;
+    display: flex;
+    flex-direction: column;
+}
+
+.DnyaanHeader{
+    flex:0.5;
+    border-bottom: white solid 2px;
+}
+
+.NavigationPanel{
+    flex:0.5;
+
+    /*overflow-x: scroll;*/
+}
+
+.NavigationPanel>a:hover{
+    background:black;
+}
+
+/*a{*/
+/*    width: 100%;*/
+/*    height:100%;*/
+/*}*/
+
+a>div{
+    padding-top: 0.5vh;
+    width: 100%;
+    height:100%;
+}

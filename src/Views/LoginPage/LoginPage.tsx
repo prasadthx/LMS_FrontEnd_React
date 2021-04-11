@@ -65,6 +65,11 @@ export class LoginPage extends React.Component{
                                                 </span>
                                         <Link to='/instructor'>Sign in</Link>
                                     </button>
+                                    <button>
+                                        <Link to='/action'>
+                                        Next
+                                        </Link>
+                                    </button>
                                 </div>
                         </form>
                     </div>

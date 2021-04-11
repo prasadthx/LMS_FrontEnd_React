@@ -1,5 +1,23 @@
 .MainContent{
-    flex: 0.8;
+    flex: 1.0;
     height: 100vh;
     background: black;
+}
+
+.ToggleMainContent{
+    flex:0.8;
+    height: 100vh;
+    background: black;
+}
+
+@media screen and (min-width: 990px){
+    .MainContent{
+        flex: 0.8;
+        height: 100vh;
+    }
+
+    .ToggleMainContent{
+        flex: 1.0;
+        height: 100vh;
+    }
 }
