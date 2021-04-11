@@ -38,7 +38,7 @@ export default class CreateAssignment extends React.Component<any, any>{
                                             <label className='text-3xl'>Assignment Name: </label>
                                         </div>
                                         <div className='text-black text-2xl'>
-                                            <Field name="company" component="input" className='text-center width-3/5' />
+                                            <Field name="assignmentName" component="input" className='text-center width-3/5' />
                                         </div>
                                     </div>
                                     <div className="buttons mt-3">
@@ -122,7 +122,7 @@ export default class CreateAssignment extends React.Component<any, any>{
                                     </button>
                                 </div>
                                 {/*@ts-ignore*/}
-                                {/*<pre>{JSON.stringify(values, 0, 2)}</pre>*/}
+                                <pre>{JSON.stringify(values, 0, 2)}</pre>
                             </form>
                         )
                     }}
