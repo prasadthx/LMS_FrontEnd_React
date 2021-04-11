@@ -14,13 +14,24 @@
 }
 
 .recipients {
-    flex: 0.3;
+    flex: 1.0;
 }
 
 .chatSection{
-    flex: 0.7;
+    flex: 0.0;
+    width:0;
+    /*height:0;*/
 }
 
+@media screen and (min-width: 800px) {
+    .recipients {
+        flex: 0.3;
+    }
+
+    .chatSection{
+        flex: 0.7;
+    }
+}
 .recipientsHeader{
     flex: 0.1;
     width:100%;

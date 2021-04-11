@@ -15,18 +15,10 @@ export class Sidebar extends React.Component<any,{initialValue:string}>{
         }
     }
 
-    hideOrShow(){
-
-    }
-
-    changeStyles = () => {
-        // = this.state.isClicked?'black' : 'white'
-    }
-
     render() {
         const SidebarClass = (this.props.sidebarStatus == 'before') ? 'Sidebar' : 'ToggleSidebar';
         return (
-            <div onClick={this.hideOrShow.bind(this)} className={SidebarClass + ' flex'+' flex-col'}>
+            <div className={SidebarClass + ' flex'+' flex-col'}>
                 <SidebarHeader/>
                 <SidebarContent/>
             </div>

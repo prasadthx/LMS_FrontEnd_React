@@ -24,7 +24,6 @@ export class InstructorStructure extends React.Component<{},{state:string}>{
     }
 
     render() {
-        const greeting = 'Welcome to React';
         return (
 
             <div className='dashboard'>
