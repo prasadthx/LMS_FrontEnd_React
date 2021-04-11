@@ -1,9 +1,11 @@
 import React from "react"
 import "./MenuCards.css"
-const MenuCards=({heading})=>{
+
+
+const MenuCards = (props:any) =>{
 return(
     <div className="menuCardDiv">
-        <h3>{heading}</h3> <br></br>
+        <h3>{props.heading}</h3> <br></br>
         
     
 

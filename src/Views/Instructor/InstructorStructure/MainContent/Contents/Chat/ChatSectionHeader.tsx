@@ -15,7 +15,7 @@ export class ChatSectionHeader extends React.Component<any, any> {
                             Prasadthx
                         </span>
                     </div>
-                    <div className=''>
+                    <div className='mr-2'>
                         <BsThreeDotsVertical/>
                     </div>
                 </div>

@@ -1,13 +1,15 @@
 .App {
-  /*background-image: url('./assets/images/background.jpg'); */
-  
+  background-image: url('./assets/images/background.jpg');
+
+  box-sizing: border-box;
+
   background-size: cover;
   
   height: 100vh;
   width: 100vw;
-  overflow-x:hidden;
+  /*overflow-x:hidden;*/
 }
 
-*{
-  margin: 0;
-}
+/**{*/
+/*  margin: 0;*/
+/*}*/
