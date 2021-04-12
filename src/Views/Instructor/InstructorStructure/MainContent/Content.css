@@ -2,4 +2,13 @@
     flex: 0.9;
     width: 100%;
     background: black;
+    height:100%;
+    /*overflow-y: scroll;*/
+    /*padding-top:5vh;*/
+    /*padding-bottom:2vh;*/
+}
+
+.contentContainer{
+    height:100%;
+    width:100%;
 }

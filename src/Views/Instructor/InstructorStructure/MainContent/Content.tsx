@@ -13,12 +13,13 @@ import {Classes} from "./Contents/Profile/Classes";
 import {Feedback} from "./Contents/Profile/Feedback";
 import {Profile} from "./Contents/Profile/Profile";
 import ViewAssignments from "./Contents/Assignments/ViewAssignments";
+import {Timetable} from "./Contents/Lectures/Timetable";
 
 export default class Content extends React.Component<any,any> {
     render() {
         return (
             <div className='Content'>
-
+                <div className='contentContainer'>
                 {/*Assignments*/}
                 <Route path='/action/assignments/CreateAssignment'>
                     <CreateAssignment/>
@@ -60,7 +61,10 @@ export default class Content extends React.Component<any,any> {
                     <Subjects/>
                 </Route>
                 <Route path='/action/lectures'>
-                    <Redirect to='/action/lectures/subjects'/>
+                    <Redirect to='/action/lectures/timetable'/>
+                </Route>
+                <Route path='/action/lectures/timetable'>
+                    <Timetable/>
                 </Route>
 
 
@@ -92,6 +96,7 @@ export default class Content extends React.Component<any,any> {
                 <Route path='/action'>
                     <Redirect to='/action/profile/profile'/>
                 </Route>
+                </div>
             </div>
         );
     };
